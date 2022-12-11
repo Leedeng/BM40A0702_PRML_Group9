@@ -79,7 +79,7 @@ def splite_train_valid(dataset_dir,ratio,seed=123455):
     """ dataset: dataset root, example: 'dataset/digital_3d_processed/' 
     ratio: ratio of traning samples, exmaple: 0.7
     return training fold and validation fold"""
-    np.random.RandomState(seed)
+    seed = np.random.RandomState(seed)
     samples_list = []
     train_samples_list = [] 
     for f in os.listdir(dataset_dir):
